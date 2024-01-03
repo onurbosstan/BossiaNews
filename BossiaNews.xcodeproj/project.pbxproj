@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C66087452B45F17800E703CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66087442B45F17800E703CA /* AppDelegate.swift */; };
+		C66087472B45F17800E703CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66087462B45F17800E703CA /* SceneDelegate.swift */; };
+		C66087492B45F17800E703CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66087482B45F17800E703CA /* ViewController.swift */; };
+		C660874C2B45F17800E703CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C660874A2B45F17800E703CA /* Main.storyboard */; };
+		C660874E2B45F17A00E703CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C660874D2B45F17A00E703CA /* Assets.xcassets */; };
+		C66087512B45F17A00E703CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C660874F2B45F17A00E703CA /* LaunchScreen.storyboard */; };
+		C66087592B45F1E100E703CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66087582B45F1E100E703CA /* GoogleService-Info.plist */; };
+		C660875C2B45F24F00E703CA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C660875B2B45F24F00E703CA /* FirebaseAuth */; };
+		C660875E2B45F24F00E703CA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C660875D2B45F24F00E703CA /* FirebaseFirestore */; };
+		C66087622B45F2DA00E703CA /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C66087612B45F2DA00E703CA /* RxBlocking */; };
+		C66087642B45F2DA00E703CA /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C66087632B45F2DA00E703CA /* RxBlocking-Dynamic */; };
+		C66087662B45F2DA00E703CA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C66087652B45F2DA00E703CA /* RxCocoa */; };
+		C66087682B45F2DA00E703CA /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C66087672B45F2DA00E703CA /* RxCocoa-Dynamic */; };
+		C660876A2B45F2DA00E703CA /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = C66087692B45F2DA00E703CA /* RxRelay */; };
+		C660876D2B45F2F400E703CA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C660876C2B45F2F400E703CA /* Alamofire */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C66087412B45F17800E703CA /* BossiaNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BossiaNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66087442B45F17800E703CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C66087462B45F17800E703CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C66087482B45F17800E703CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C660874B2B45F17800E703CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C660874D2B45F17A00E703CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C66087502B45F17A00E703CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C66087522B45F17A00E703CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C66087582B45F1E100E703CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C660873E2B45F17800E703CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C660875C2B45F24F00E703CA /* FirebaseAuth in Frameworks */,
+				C660876D2B45F2F400E703CA /* Alamofire in Frameworks */,
+				C66087622B45F2DA00E703CA /* RxBlocking in Frameworks */,
+				C660876A2B45F2DA00E703CA /* RxRelay in Frameworks */,
+				C66087662B45F2DA00E703CA /* RxCocoa in Frameworks */,
+				C660875E2B45F24F00E703CA /* FirebaseFirestore in Frameworks */,
+				C66087682B45F2DA00E703CA /* RxCocoa-Dynamic in Frameworks */,
+				C66087642B45F2DA00E703CA /* RxBlocking-Dynamic in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C66087382B45F17800E703CA = {
+			isa = PBXGroup;
+			children = (
+				C66087432B45F17800E703CA /* BossiaNews */,
+				C66087422B45F17800E703CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C66087422B45F17800E703CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C66087412B45F17800E703CA /* BossiaNews.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C66087432B45F17800E703CA /* BossiaNews */ = {
+			isa = PBXGroup;
+			children = (
+				C660875F2B45F29800E703CA /* delegates */,
+				C66087482B45F17800E703CA /* ViewController.swift */,
+				C660874A2B45F17800E703CA /* Main.storyboard */,
+				C660874D2B45F17A00E703CA /* Assets.xcassets */,
+				C660874F2B45F17A00E703CA /* LaunchScreen.storyboard */,
+				C66087522B45F17A00E703CA /* Info.plist */,
+				C66087582B45F1E100E703CA /* GoogleService-Info.plist */,
+			);
+			path = BossiaNews;
+			sourceTree = "<group>";
+		};
+		C660875F2B45F29800E703CA /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C66087442B45F17800E703CA /* AppDelegate.swift */,
+				C66087462B45F17800E703CA /* SceneDelegate.swift */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C66087402B45F17800E703CA /* BossiaNews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C66087552B45F17A00E703CA /* Build configuration list for PBXNativeTarget "BossiaNews" */;
+			buildPhases = (
+				C660873D2B45F17800E703CA /* Sources */,
+				C660873E2B45F17800E703CA /* Frameworks */,
+				C660873F2B45F17800E703CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BossiaNews;
+			packageProductDependencies = (
+				C660875B2B45F24F00E703CA /* FirebaseAuth */,
+				C660875D2B45F24F00E703CA /* FirebaseFirestore */,
+				C66087612B45F2DA00E703CA /* RxBlocking */,
+				C66087632B45F2DA00E703CA /* RxBlocking-Dynamic */,
+				C66087652B45F2DA00E703CA /* RxCocoa */,
+				C66087672B45F2DA00E703CA /* RxCocoa-Dynamic */,
+				C66087692B45F2DA00E703CA /* RxRelay */,
+				C660876C2B45F2F400E703CA /* Alamofire */,
+			);
+			productName = BossiaNews;
+			productReference = C66087412B45F17800E703CA /* BossiaNews.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C66087392B45F17800E703CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					C66087402B45F17800E703CA = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = C660873C2B45F17800E703CA /* Build configuration list for PBXProject "BossiaNews" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C66087382B45F17800E703CA;
+			packageReferences = (
+				C660875A2B45F24F00E703CA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C66087602B45F2DA00E703CA /* XCRemoteSwiftPackageReference "RxSwift" */,
+				C660876B2B45F2F400E703CA /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = C66087422B45F17800E703CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C66087402B45F17800E703CA /* BossiaNews */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C660873F2B45F17800E703CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66087512B45F17A00E703CA /* LaunchScreen.storyboard in Resources */,
+				C66087592B45F1E100E703CA /* GoogleService-Info.plist in Resources */,
+				C660874E2B45F17A00E703CA /* Assets.xcassets in Resources */,
+				C660874C2B45F17800E703CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C660873D2B45F17800E703CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66087492B45F17800E703CA /* ViewController.swift in Sources */,
+				C66087452B45F17800E703CA /* AppDelegate.swift in Sources */,
+				C66087472B45F17800E703CA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C660874A2B45F17800E703CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C660874B2B45F17800E703CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C660874F2B45F17A00E703CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C66087502B45F17A00E703CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C66087532B45F17A00E703CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C66087542B45F17A00E703CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C66087562B45F17A00E703CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6PS4DAX69J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BossiaNews/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = onurBostan.BossiaNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C66087572B45F17A00E703CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6PS4DAX69J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BossiaNews/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = onurBostan.BossiaNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C660873C2B45F17800E703CA /* Build configuration list for PBXProject "BossiaNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66087532B45F17A00E703CA /* Debug */,
+				C66087542B45F17A00E703CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C66087552B45F17A00E703CA /* Build configuration list for PBXNativeTarget "BossiaNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66087562B45F17A00E703CA /* Debug */,
+				C66087572B45F17A00E703CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C660875A2B45F24F00E703CA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
+		C66087602B45F2DA00E703CA /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+		C660876B2B45F2F400E703CA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C660875B2B45F24F00E703CA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C660875A2B45F24F00E703CA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C660875D2B45F24F00E703CA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C660875A2B45F24F00E703CA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C66087612B45F2DA00E703CA /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C66087602B45F2DA00E703CA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		C66087632B45F2DA00E703CA /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C66087602B45F2DA00E703CA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		C66087652B45F2DA00E703CA /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C66087602B45F2DA00E703CA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C66087672B45F2DA00E703CA /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C66087602B45F2DA00E703CA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		C66087692B45F2DA00E703CA /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C66087602B45F2DA00E703CA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		C660876C2B45F2F400E703CA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C660876B2B45F2F400E703CA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C66087392B45F17800E703CA /* Project object */;
+}
