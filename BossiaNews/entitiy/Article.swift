@@ -13,12 +13,12 @@ struct Article: Codable {
         let id: String?
         let name: String?
     }
-    let source: Source
-    let author: String
-    let title: String
-    let descripton: String
-    let url: String
-    let urlToImage: String
-    let publishedAt: String
-    let content: String
+    let source: Source?
+    let author: String?
+    let title: String?
+    let description: String?
+    let url: String?
+    let urlToImage: String?
+    let publishedAt: String?
+    let content: String?
 }
