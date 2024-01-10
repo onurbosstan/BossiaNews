@@ -12,6 +12,7 @@ import RxSwift
 
 class Home: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var selectedCategoryLabel: UILabel!
     
     var newsList = [Article]()
     var viewModel = HomeViewModel()
@@ -32,21 +33,30 @@ class Home: UIViewController {
                     .disposed(by: disposeBag)
     }
     @IBAction func menuButton(_ sender: Any) {
-        let alertController = UIAlertController(title: "Category", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Category", message: "Please select the news category you want to read.", preferredStyle: .actionSheet)
 
+        
             let economyAction = UIAlertAction(title: "Economy", style: .default) { _ in
-                
+                self.viewModel.uploadCategoryNews(category: "economy")
+                self.selectedCategoryLabel.text = "ECONOMY"
             }
             let techCrunchAction = UIAlertAction(title: "TechCrunch", style: .default) { _ in
-                
+                self.viewModel.uploadCategoryNews(category: "techcrunch")
+                self.selectedCategoryLabel.text = "TECHCRUNCH"
             }
             let articlesAction = UIAlertAction(title: "Articles", style: .default) { _ in
-                
+                self.viewModel.uploadCategoryNews(category: "articles")
+                self.selectedCategoryLabel.text = "ARTICLES"
+            }
+            let technologyAction = UIAlertAction(title: "Technology", style: .default) { _ in
+                self.viewModel.uploadCategoryNews(category: "technology")
+                self.selectedCategoryLabel.text = "TECHNOLOGY"
             }
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             alertController.addAction(economyAction)
             alertController.addAction(techCrunchAction)
             alertController.addAction(articlesAction)
+            alertController.addAction(technologyAction)
             alertController.addAction(cancelAction)
             present(alertController, animated: true, completion: nil)
     }
