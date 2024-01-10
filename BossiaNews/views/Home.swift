@@ -31,6 +31,25 @@ class Home: UIViewController {
                     })
                     .disposed(by: disposeBag)
     }
+    @IBAction func menuButton(_ sender: Any) {
+        let alertController = UIAlertController(title: "Category", message: nil, preferredStyle: .actionSheet)
+
+            let economyAction = UIAlertAction(title: "Economy", style: .default) { _ in
+                
+            }
+            let techCrunchAction = UIAlertAction(title: "TechCrunch", style: .default) { _ in
+                
+            }
+            let articlesAction = UIAlertAction(title: "Articles", style: .default) { _ in
+                
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(economyAction)
+            alertController.addAction(techCrunchAction)
+            alertController.addAction(articlesAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+    }
 }
 extension Home: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,3 +70,4 @@ extension Home: UITableViewDelegate, UITableViewDataSource {
         return 400
     }
 }
+
