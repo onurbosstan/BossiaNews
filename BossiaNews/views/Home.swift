@@ -31,6 +31,16 @@ class Home: UIViewController {
                         self?.tableView.reloadData()
                     })
                     .disposed(by: disposeBag)
+        
+        viewModel.isLoading
+                    .subscribe(onNext: { [weak self] isLoading in
+                        if isLoading {
+                            Animation.showActivityIndicator()
+                        } else {
+                            Animation.hideActivityIndicator()
+                        }
+                    })
+                    .disposed(by: disposeBag)
     }
     @IBAction func menuButton(_ sender: Any) {
         let alertController = UIAlertController(title: "Category", message: "Please select the news category you want to read.", preferredStyle: .actionSheet)
@@ -38,19 +48,19 @@ class Home: UIViewController {
         
             let economyAction = UIAlertAction(title: "Economy", style: .default) { _ in
                 self.viewModel.uploadCategoryNews(category: "economy")
-                self.selectedCategoryLabel.text = "ECONOMY"
+                self.selectedCategoryLabel.text = "Economy"
             }
             let techCrunchAction = UIAlertAction(title: "TechCrunch", style: .default) { _ in
                 self.viewModel.uploadCategoryNews(category: "techcrunch")
-                self.selectedCategoryLabel.text = "TECHCRUNCH"
+                self.selectedCategoryLabel.text = "TechCrunch"
             }
             let articlesAction = UIAlertAction(title: "Articles", style: .default) { _ in
                 self.viewModel.uploadCategoryNews(category: "articles")
-                self.selectedCategoryLabel.text = "ARTICLES"
+                self.selectedCategoryLabel.text = "Articles"
             }
             let technologyAction = UIAlertAction(title: "Technology", style: .default) { _ in
                 self.viewModel.uploadCategoryNews(category: "technology")
-                self.selectedCategoryLabel.text = "TECHNOLOGY"
+                self.selectedCategoryLabel.text = "Technology"
             }
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             alertController.addAction(economyAction)

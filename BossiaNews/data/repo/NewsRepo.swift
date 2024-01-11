@@ -80,6 +80,7 @@ class NewsRepo {
         }
     }
     func uploadCategoryNews(category: String, completion: @escaping ([Article]) -> Void) {
+        Animation.showActivityIndicator()
             // Belirli bir kategoriye ait haberleri yükleme
             var url: String
 
@@ -96,6 +97,7 @@ class NewsRepo {
                 return
             }
             AF.request(url, method: .get).response { response in
+                Animation.hideActivityIndicator()
                     if let data = response.data {
                         do {
                             let responses = try JSONDecoder().decode(ArticleResponse.self, from: data)
