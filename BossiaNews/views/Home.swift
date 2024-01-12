@@ -13,27 +13,25 @@ import RxSwift
 class Home: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var selectedCategoryLabel: UILabel!
-    
+    @IBOutlet weak var imageView: UIImageView!
     var newsList = [Article]()
     var viewModel = HomeViewModel()
     var disposeBag = DisposeBag()
+    var lastTapTime: Date? //İki tıklama arasındaki zaman aralığını kontrol etmek için
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        self.tabBarController?.delegate = self
         viewModel.uploadNews()
-        
-        viewModel.newList
-                    .subscribe(onNext: { [weak self] articles in
+        viewModel.newList.subscribe(onNext: { [weak self] articles in
                         self?.newsList = articles
                         self?.tableView.reloadData()
                     })
                     .disposed(by: disposeBag)
-        
-        viewModel.isLoading
-                    .subscribe(onNext: { [weak self] isLoading in
+        viewModel.isLoading.subscribe(onNext: { [weak self] isLoading in
                         if isLoading {
                             Animation.showActivityIndicator()
                         } else {
@@ -44,8 +42,6 @@ class Home: UIViewController {
     }
     @IBAction func menuButton(_ sender: Any) {
         let alertController = UIAlertController(title: "Category", message: "Please select the news category you want to read.", preferredStyle: .actionSheet)
-
-        
             let economyAction = UIAlertAction(title: "Economy", style: .default) { _ in
                 self.viewModel.uploadCategoryNews(category: "economy")
                 self.selectedCategoryLabel.text = "Economy"
@@ -90,4 +86,25 @@ extension Home: UITableViewDelegate, UITableViewDataSource {
         return 400
     }
 }
+//TabBarItem basınca tabloyu en üste getirmek için;
+extension Home: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if viewController is Home {
+            scrollToTop()
+        }
+    }
+    func scrollToTop() {
+        let currentTime = Date()
+        if let lastTapTime = lastTapTime, currentTime.timeIntervalSince(lastTapTime) < 0.7 { //İki tıklama arasındaki zaman aralığını kontrol et
+            // Çift tıklama algılandığında, tabloyu en üstüne getir
+            let indexPath = IndexPath(row: 0, section: 0)
+            self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+            self.lastTapTime = nil // Şu anki tıklama zamanını sıfırla
+        } else {
+            self.lastTapTime = currentTime // Şu anki tıklama zamanını kaydet
+        }
+    }
+}
+
+
 
