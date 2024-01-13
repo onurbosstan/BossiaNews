@@ -15,4 +15,8 @@ class ChangePasswordViewModel {
                 completion(error)
             }
         }
+    func verifyCurrentPassword(currentPassword: String, completion: @escaping (Bool) -> Void) {
+        let isPasswordCorrect = true
+        completion(isPasswordCorrect)
+    }
 }
