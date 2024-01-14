@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileCell: UITableViewCell {
+class SettingsCell: UITableViewCell {
     @IBOutlet weak var optionsLabel: UILabel!
     @IBOutlet weak var iconBg: UIView!
     @IBOutlet weak var iconImageView: UIImageView!

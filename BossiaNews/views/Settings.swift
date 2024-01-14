@@ -8,9 +8,9 @@
 import UIKit
 import FirebaseAuth
 
-class Profile: UIViewController {
+class Settings: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var viewModel = ProfileViewModel()
+    var viewModel = SettingsViewModel()
     let menuOptions: [[(title: String, image: String, bgColor: UIColor, iconColor: UIColor)]] =
        [
            [(title: "Favorite News", image: "star.fill", bgColor: UIColor(red: 0.5, green: 0.7, blue: 1.0, alpha: 1.0), iconColor: .white),
@@ -30,12 +30,12 @@ class Profile: UIViewController {
         self.present(alert, animated: true)
     }
 }
-extension Profile: UITableViewDelegate, UITableViewDataSource {
+extension Settings: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuOptions[section].count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsCell
         let item = menuOptions[indexPath.section][indexPath.row]
         cell.iconBg.backgroundColor = item.bgColor
         cell.iconImageView.image = UIImage(systemName: item.image)
@@ -47,8 +47,10 @@ extension Profile: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            navigateToChangePassword()
+            favoriteNews()
         case 1:
+            navigateToChangePassword()
+        case 2:
             logOut()
         default:
             break
@@ -57,9 +59,11 @@ extension Profile: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
+    func favoriteNews() {
+        //Eklenecek
+    }
     func navigateToChangePassword() {
-           let changePasswordVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChangePassword") as! ChangePassword
-           self.navigationController?.pushViewController(changePasswordVC, animated: true)
+        self.performSegue(withIdentifier: "toChangePassword", sender: nil)
        }
        func logOut() {
            viewModel.signOut { success in
