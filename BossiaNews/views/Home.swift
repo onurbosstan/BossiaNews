@@ -21,7 +21,6 @@ class Home: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.delegate = self
         tableView.dataSource = self
         self.tabBarController?.delegate = self
@@ -84,6 +83,17 @@ extension Home: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedNews = newsList[indexPath.row]
+        performSegue(withIdentifier: "toDetail", sender: selectedNews)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            if let detailViewController = segue.destination as? Detail, let selectedNews = sender as? Article {
+                detailViewController.viewModel.selectedNews.onNext(selectedNews)
+            }
+        }
     }
 }
 //TabBarItem basınca tabloyu en üste getirmek için;
