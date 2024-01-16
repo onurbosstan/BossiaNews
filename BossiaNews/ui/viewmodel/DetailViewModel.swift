@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import RxSwift
+
+class DetailViewModel {
+    var nrepo = NewsRepo()
+    var selectedNews: BehaviorSubject<Article?> = BehaviorSubject<Article?>(value: nil)
+}
