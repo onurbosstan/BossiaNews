@@ -79,6 +79,11 @@ extension Home: UITableViewDelegate, UITableViewDataSource {
         if let imageUrl = URL(string: news.urlToImage ?? "") {
             cell.thumbnailImageView.kf.setImage(with: imageUrl)
         }
+        cell.copyLinkButtonAction = { [weak self] in
+            if let linkToCoppy = news.url {
+                UIPasteboard.general.string = linkToCoppy
+            }
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
