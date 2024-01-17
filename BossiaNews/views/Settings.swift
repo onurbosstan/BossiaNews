@@ -13,7 +13,7 @@ class Settings: UIViewController {
     var viewModel = SettingsViewModel()
     let menuOptions: [[(title: String, image: String, bgColor: UIColor, iconColor: UIColor)]] =
        [
-           [(title: "Favorite News", image: "star.fill", bgColor: UIColor(red: 0.5, green: 0.7, blue: 1.0, alpha: 1.0), iconColor: .white),
+           [
             (title: "Change Password", image: "lock.fill", bgColor: UIColor(red: 1.0, green: 0.8, blue: 0.0, alpha: 1.0), iconColor: .white),
             (title: "Logout", image: "rectangle.portrait.and.arrow.right", bgColor: .red, iconColor: .white)]
        ]
@@ -47,10 +47,8 @@ extension Settings: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            favoriteNews()
-        case 1:
             navigateToChangePassword()
-        case 2:
+        case 1:
             logOut()
         default:
             break
