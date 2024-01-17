@@ -10,7 +10,7 @@ import Foundation
 class ArticleResponse: Codable {
     var status: String?
     var totalResults: Int?
-    var articles: [Article]
+    var articles: [Article]?
     
     init() {
         self.articles = []

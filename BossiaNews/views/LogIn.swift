@@ -11,12 +11,12 @@ import FirebaseAuth
 class LogIn: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var logInButtons: UIButton!
     let viewModel = LogInViewModel()
     var iconClick = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -25,11 +25,9 @@ class LogIn: UIViewController {
             self.performSegue(withIdentifier: "toHomeVC", sender: nil)
         }
     }
-    
     @objc func closeKeyboard() {
         view.endEditing(true)
     }
-    
     @IBAction func logInButton(_ sender: Any) {
         if let email = emailText.text, let password = passwordText.text {
             viewModel.signIn(email: email, password: password) { error in
@@ -49,7 +47,6 @@ class LogIn: UIViewController {
         }
         iconClick = !iconClick
     }
-    
     func makeAlert(titleInput: String, messageInput: String) {
         let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: .alert)
         let okButton = UIAlertAction(title: "OK", style: .default)

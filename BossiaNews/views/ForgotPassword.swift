@@ -8,15 +8,12 @@
 import UIKit
 
 class ForgotPassword: UIViewController {
-
     @IBOutlet weak var emailText: UITextField!
     let viewModel = NewsRepo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
     @IBAction func resetButton(_ sender: Any) {
         if let email = self.emailText.text {
             self.viewModel.forgotPassword(email: email) { error in

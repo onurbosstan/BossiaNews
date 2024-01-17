@@ -53,6 +53,15 @@ class NewsRepo {
             }
         }
     }
+    func changePassword(newPassword: String, completion: @escaping (Error?) -> Void) {
+            if let user = Auth.auth().currentUser {
+                user.updatePassword(to: newPassword) { error in
+                    completion(error)
+                }
+            } else {
+                completion(nil)
+            }
+        }
     func signOut(completion: @escaping (Bool) -> Void) {
         do {
             try Auth.auth().signOut()
@@ -83,7 +92,7 @@ class NewsRepo {
         Animation.showActivityIndicator()
             // Belirli bir kategoriye ait haberleri yükleme
             var url: String
-
+        
             switch category.lowercased() {
             case "economy":
                 url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=1fcfc7e446774a01969a8bca74003bac"

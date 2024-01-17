@@ -12,7 +12,6 @@ class HomeViewModel {
     var nrepo = NewsRepo()
     var newList = BehaviorSubject<[Article]>(value: [Article]())
     var isLoading = BehaviorSubject<Bool>(value: false)
-    
     func uploadNews() {
         nrepo.uploadNews { [weak self] articles in
             self?.isLoading.onNext(false)
