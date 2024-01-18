@@ -41,7 +41,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Reset my password">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,7 +117,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log In">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -305,24 +305,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bossia" translatesAutoresizingMaskIntoConstraints="NO" id="Hpi-oI-HsI">
-                                <rect key="frame" x="95" y="144" width="200" height="150"/>
+                                <rect key="frame" x="95" y="144" width="203" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="NJ0-Fe-xwx"/>
-                                    <constraint firstAttribute="width" secondItem="Hpi-oI-HsI" secondAttribute="height" multiplier="4:3" id="ZWD-h2-diW"/>
-                                    <constraint firstAttribute="width" constant="200" id="b4d-2F-Bi2"/>
+                                    <constraint firstAttribute="height" constant="150" id="fLt-aK-Lxb"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kba-AR-K2O">
-                                <rect key="frame" x="16" y="409" width="358" height="34"/>
+                                <rect key="frame" x="16" y="409" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LG7-bP-AMD">
-                                <rect key="frame" x="135" y="493" width="120" height="34.333333333333371"/>
+                                <rect key="frame" x="16" y="493" width="361" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Confirm">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -332,35 +330,35 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ms-X2-GVy">
-                                <rect key="frame" x="16" y="309" width="358" height="21"/>
+                                <rect key="frame" x="16" y="309" width="361" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHA-49-QeD">
-                                <rect key="frame" x="16" y="360" width="358" height="34"/>
+                                <rect key="frame" x="16" y="360" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pWx-zk-C2k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Kba-AR-K2O" firstAttribute="leading" secondItem="pWx-zk-C2k" secondAttribute="leading" constant="16" id="9hq-1r-gzF"/>
+                            <constraint firstItem="Hpi-oI-HsI" firstAttribute="centerX" secondItem="2ms-X2-GVy" secondAttribute="centerX" id="DJj-95-u9Z"/>
                             <constraint firstItem="2ms-X2-GVy" firstAttribute="leading" secondItem="pWx-zk-C2k" secondAttribute="leading" constant="16" id="Hfp-Fb-K2S"/>
-                            <constraint firstItem="pWx-zk-C2k" firstAttribute="trailing" secondItem="Hpi-oI-HsI" secondAttribute="trailing" constant="95" id="Ovo-BB-5kF"/>
+                            <constraint firstItem="Hpi-oI-HsI" firstAttribute="leading" secondItem="pWx-zk-C2k" secondAttribute="leading" constant="95" id="ISZ-kA-QDi"/>
                             <constraint firstItem="iHA-49-QeD" firstAttribute="leading" secondItem="pWx-zk-C2k" secondAttribute="leading" constant="16" id="UNL-Cb-vUE"/>
                             <constraint firstItem="Kba-AR-K2O" firstAttribute="top" secondItem="iHA-49-QeD" secondAttribute="bottom" constant="15" id="WO9-1O-bBZ"/>
                             <constraint firstItem="iHA-49-QeD" firstAttribute="top" secondItem="2ms-X2-GVy" secondAttribute="bottom" constant="30" id="Wed-qZ-PLA"/>
-                            <constraint firstItem="LG7-bP-AMD" firstAttribute="leading" secondItem="pWx-zk-C2k" secondAttribute="leading" constant="135" id="XBL-fZ-EWI"/>
+                            <constraint firstItem="LG7-bP-AMD" firstAttribute="leading" secondItem="pWx-zk-C2k" secondAttribute="leading" constant="16" id="XBL-fZ-EWI"/>
                             <constraint firstItem="pWx-zk-C2k" firstAttribute="trailing" secondItem="Kba-AR-K2O" secondAttribute="trailing" constant="16" id="hh6-6m-THp"/>
-                            <constraint firstItem="2ms-X2-GVy" firstAttribute="top" secondItem="Hpi-oI-HsI" secondAttribute="bottom" constant="15" id="hns-Fx-geu"/>
+                            <constraint firstItem="2ms-X2-GVy" firstAttribute="top" secondItem="Hpi-oI-HsI" secondAttribute="bottom" constant="15" id="jxW-g3-Gmg"/>
                             <constraint firstItem="LG7-bP-AMD" firstAttribute="top" secondItem="Kba-AR-K2O" secondAttribute="bottom" constant="50" id="l0v-Nd-Wky"/>
                             <constraint firstItem="pWx-zk-C2k" firstAttribute="trailing" secondItem="iHA-49-QeD" secondAttribute="trailing" constant="16" id="nv4-o7-64l"/>
                             <constraint firstItem="pWx-zk-C2k" firstAttribute="trailing" secondItem="2ms-X2-GVy" secondAttribute="trailing" constant="16" id="pOL-KM-A2b"/>
-                            <constraint firstItem="Hpi-oI-HsI" firstAttribute="leading" secondItem="pWx-zk-C2k" secondAttribute="leading" constant="95" id="pZT-Ry-fES"/>
-                            <constraint firstItem="Hpi-oI-HsI" firstAttribute="top" secondItem="pWx-zk-C2k" secondAttribute="top" constant="100" id="pbg-PF-F2Y"/>
-                            <constraint firstItem="pWx-zk-C2k" firstAttribute="trailing" secondItem="LG7-bP-AMD" secondAttribute="trailing" constant="135" id="yHX-Hh-PbM"/>
+                            <constraint firstItem="Hpi-oI-HsI" firstAttribute="top" secondItem="pWx-zk-C2k" secondAttribute="top" constant="100" id="pS1-iB-ZWf"/>
+                            <constraint firstItem="pWx-zk-C2k" firstAttribute="trailing" secondItem="LG7-bP-AMD" secondAttribute="trailing" constant="16" id="yHX-Hh-PbM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HWn-kf-fU9"/>
@@ -663,7 +661,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Register">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -781,8 +779,8 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
